@@ -8,9 +8,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MyController {
 
-  @RequestMapping("/AddPerson")
-  public String addPerson(@RequestBody PersonDTO personDTO) {
-    return personDTO.name + " is " + personDTO.age + " years old";
+  //================================================================
+  // ADD PERSON
+  //================================================================
+  @RequestMapping("AddPerson")
+  String addPerson(@RequestBody PersonDTO personDTO) {
+    return personDTO.propName + " is " + personDTO.propAge + " years old";
   }
 
 }
